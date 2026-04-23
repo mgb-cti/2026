@@ -9,7 +9,7 @@ This report analyzes a recently observed phishing campaign leveraging a spoofed 
 
 **What is the objective?:** Credential harvesting & financial fraud.
 
-**What makes it relevant?:** <50 days old
+**What makes it relevant?:** <50 days old and actively targeting users via SMS.
 
 ## Key Findings
 This campaign is targeted at residents in the state of Georgia by a threat actor sending an image of a spoofed traffic violation that urges the victim to scan the visible QR code to make a payment on a 'traffic violation ticket'. The intent is for the user to be flustered in urgency to quickly make a payment on a low cost traffic violation for $6.99 USD due to 'Failure to Pay Toll'.
