@@ -15,17 +15,22 @@ The campaign was launched on March 4th, 2026 with users receiving the phishing i
 ![image alt](https://github.com/mgb-cti/2026/blob/d6eff80204d0b30f0fc5c759c44050b9237491e4/traffficticketphishing.jpg)
 
 ## Indicators of Compromise (IOCs)
+
 Domain -
     Registered on: March 3rd, 2026
     Registrar: NameSilo, LLC
+
 IP Address -
     IP: 172.67.133.25
     Hosted by: CloudFlare
+
 Redirect Chain - 
     Inital URL from QR code: `https://hin.obediencegb.xyz/r/he`
     Final phishing page: `https://dds-georgia.uabph.icu/pay/`
+
 Page Assets - 
     JS files - Most are null 'javascript:void(null)'
+
 Phone Number - 
     +1 945-393-1471 (Origin of phishing image)
 
@@ -52,20 +57,21 @@ First you are to enter your personal information so it can 'pull up your record'
 
 ## Social Engineering Analysis
 Psychological tactics -
-    - Urgency
-    - Authority impersonation
-    - Fear
+        - Urgency
+        - Fear
+        - Authority impersonation
 
 ## Risk Assessment
-This will be mostly targeted at any phone number registered in the state of Georgia.  Expect end points mobile devices to be tagreted via SMS.
-The likelihood of this is large and severity is minimal unless an end user falls for the phishing link.
+This will be mostly targeted at any phone number registered in the state of Georgia.  Expect end points mobile devices to be tagreted via SMS. The likelihood of this is large and severity is minimal unless an end user falls for the phishing link.
 
 ## Mitigation Recommendations
 Block -
+
   Phone number = +1 945-393-1471
-  url = `https://hin.obediencegb.xyz/r/he`
-        `https://dds-georgia.uabph.icu/pay/`
+  
+  url = `https://hin.obediencegb.xyz/r/he` & `https://dds-georgia.uabph.icu/pay/`
 
 ## References
+
 VirusTotal for url analysis | Triage for url analysis | MITRE ATT&CK for MITRE IDs 
 ---
