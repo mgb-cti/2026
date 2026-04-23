@@ -22,22 +22,25 @@ The campaign was launched on March 4th, 2026 with users receiving the phishing i
 ## Indicators of Compromise (IOCs)
 
 Domain -
-    Registered on: March 3rd, 2026
-    Registrar: NameSilo, LLC
+Registered on: March 3rd, 2026
+   
+Registrar: NameSilo, LLC
 
 IP Address -
-    IP: 172.67.133.25
-    Hosted by: CloudFlare
+IP: 172.67.133.25
+
+Hosted by: CloudFlare
 
 Redirect Chain - 
-    Initial URL from QR code: `https://hin.obediencegb[.]xyz/r/he`
-    Final phishing page: `https://dds-georgia.uabph[.]icu/pay/`
+Initial URL from QR code: `https://hin.obediencegb[.]xyz/r/he`
+
+Final phishing page: `https://dds-georgia.uabph[.]icu/pay/`
 
 Page Assets - 
-    JS files - Most are null 'javascript:void(null)'
+JS files - Most are null 'javascript:void(null)'
 
 Phone Number - 
-    +1 945-393-1471 (Origin of phishing image)
++1 945-393-1471 (Origin of phishing image)
 
 ## Infrastructure Analysis
 - Domain age correlation (March 3 vs March 4 attack)
@@ -76,14 +79,20 @@ First you are to enter your personal information so it can 'pull up your record'
 
 ## Social Engineering Analysis
 Urgency: 24-hour deadline + legal consequences
+
 Authority: Government branding + legal terminology
+
 Fear: Threat of arrest / bench warrant
+
 Low friction: Small fine reduces skepticism
 
+
 Psychological tactics -
-        - Urgency
-        - Fear
-        - Authority impersonation
+- Urgency
+        
+- Fear
+        
+- Authority impersonation
 
 
 ## Risk Assessment
@@ -92,21 +101,26 @@ Likelihood: High (broad SMS targeting + urgency tactic)
 Impact: High (financial theft + PII compromise)
 
 Expanded:
-    - Credit card fraud
-    - Identity theft
-    - Potential reuse of stolen credentials
+- Credit card fraud
+
+- Identity theft
+
+- Potential reuse of stolen credentials
 
 ## Mitigation Recommendations
 - User awareness training (QR phishing)
+
 - SMS filtering where possible
+
 - Domain monitoring for lookalikes
+
 - Blocking at DNS/web proxy level
 
 Block -
 
-  Phone number = +1 945-393-1471
+Phone number = +1 945-393-1471
   
-  url = `https://hin.obediencegb[.]xyz/r/he` & `https://dds-georgia.uabph[.]icu/pay/`
+url = `https://hin.obediencegb[.]xyz/r/he` & `https://dds-georgia.uabph[.]icu/pay/`
   
 ## Detection Opportunities
 Splunk -
