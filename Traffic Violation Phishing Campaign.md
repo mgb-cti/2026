@@ -33,8 +33,11 @@ Phone Number -
 
 ## Attack Flow
 Initally you would be sent an image from an unknown number which states that you will have a warrant out for your arrest if you do not pay a fine. Once you scan the QR code (MITRE ID: T1566.002), you are sent to `https://hin.obediencegb.xyz/r/he` which then redirects you to `https://dds-georgia.uabph.icu/pay/`. Most of the final redirect page is a great replica of what looks to be a real government website (MITRE ID: T1656), however most of the page is simply fluff with no real endpoint or redirects.
+
 [!image alt](https://github.com/mgb-cti/2026/blob/d6eff80204d0b30f0fc5c759c44050b9237491e4/trafficticketlandingpage.png)
+
 First you are to enter your personal information so it can 'pull up your record' (MITRE ID: T1598.002), then it will prompt you with the same false state law that the victim broke, and what follows is the request for insertion of the victim's payment method (MITRE ID: T1657). From there it will make it look like the payment failed in an attempt to get the victim to enter other credit card info.
+
 [!image alt](https://github.com/mgb-cti/2026/blob/d6eff80204d0b30f0fc5c759c44050b9237491e4/traffficticketpayment.png)
 
 ## MITRE ATT&CK Mapping
