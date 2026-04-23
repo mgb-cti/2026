@@ -16,6 +16,7 @@ This campaign is targeted at residents in the state of Georgia by a threat actor
 The campaign was launched on March 4th, 2026 with users receiving the phishing image on the same date which urges them to pay the 'fine' or have a 'bench warrant placed for the victims arrest'. The listed 'court date' or 'due date' was for March 5th, 2026 - which shows the intent for urgency. Obviously this is an attempt to make the victim panic into following the phishing QR code and submitting a form of payment.
 
 *Original Phishing Image Sent by Threat Actor*
+
 ![image alt](https://github.com/mgb-cti/2026/blob/d6eff80204d0b30f0fc5c759c44050b9237491e4/traffficticketphishing.jpg)
 
 ## Indicators of Compromise (IOCs)
@@ -56,11 +57,13 @@ Phone Number -
 Initially you would be sent an image from an unknown number which states that you will have a warrant out for your arrest if you do not pay a fine. Once you scan the QR code (MITRE ID: T1566.002), you are sent to `https://hin.obediencegb.xyz/r/he` which then redirects you to `https://dds-georgia.uabph.icu/pay/`. Most of the final redirect page is a emulating a legitimate government portal (MITRE ID: T1656), however most of the page is simply fluff with no real endpoint or redirects.
 
 *Landing Page After Redirect*
+
 ![image alt](https://github.com/mgb-cti/2026/blob/d6eff80204d0b30f0fc5c759c44050b9237491e4/trafficticketlandingpage.png)
 
 First you are to enter your personal information so it can 'pull up your record' (MITRE ID: T1598.002), then it will prompt you with the same false state law that the victim broke, and what follows is the request for insertion of the victim's payment method. From there it will make it look like the payment failed in an attempt to get the victim to enter other credit card info.
 
 *Payment Page Screencap*
+
 ![image alt](https://github.com/mgb-cti/2026/blob/d6eff80204d0b30f0fc5c759c44050b9237491e4/traffficticketpayment.png)
 
 ## MITRE ATT&CK Mapping
