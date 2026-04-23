@@ -4,8 +4,11 @@
 This report analyzes a recently observed phishing campaign leveraging a spoofed traffic violation notice to harvest banking credentials via a malicious URL.
 
 **What is the threat?:** Phishing campaign impersonating government traffic enforcement.
+
 **Who is targeted?:** Residents in the state of Georgia - Fulton County, GA specifically.
+
 **What is the objective?:** Credential harvesting & financial fraud.
+
 **What makes it relevant?:** <50 days old
 
 ## Key Findings
