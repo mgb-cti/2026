@@ -45,7 +45,7 @@ Phone Number -
 
 ## Infrastructure Analysis
 - Domain age correlation (March 3 vs March 4 attack)
-- Hosting insight (Cloudflare → possible obfuscation)
+- Hosting insight (Cloudflare -> possible obfuscation)
 - Domain naming patterns (.xyz, .icu)
 - Redirect infrastructure purpose (tracking / evasion)
 
@@ -56,9 +56,9 @@ Phone Number -
 4. Redirect to phishing site
 5. User submits PII
 6. User submits payment info
-7. Payment “fails” → prompts re-entry
+7. Payment “fails” -> prompts re-entry
 
-Initially you would be sent an image from an unknown number which states that you will have a warrant out for your arrest if you do not pay a fine. Once you scan the QR code (MITRE ID: T1566.002), you are sent to `https://hin.obediencegb[.]xyz/r/he` which then redirects you to `https://dds-georgia.uabph[.]icu/pay/`. Most of the final redirect page is a emulating a legitimate government portal (MITRE ID: T1656), however most of the page is simply fluff with no real endpoint or redirects.
+Initially you would be sent an image from an unknown number which states that you will have a warrant out for your arrest if you do not pay a fine. Once you scan the QR code (MITRE ID: T1566.002), you are sent to `https://hin.obediencegb[.]xyz/r/he` which then redirects you to `https://dds-georgia.uabph[.]icu/pay/`. Most of the final redirect page is emulating a legitimate government portal (MITRE ID: T1656), however most of the page is simply fluff with no real endpoint or redirects.
 
 *Landing Page After Redirect*
 
@@ -131,7 +131,7 @@ Splunk -
 
 DNS -
 `index=* sourcetype=dns
-query="REPLACE_WITH_DOMAIN.com"
+query="hin.obediencegb.xyz"
 | stats count by src_ip, query`
 
 ## References
