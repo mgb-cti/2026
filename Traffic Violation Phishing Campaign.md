@@ -2,7 +2,7 @@
 ### TLP:CLEAR
 ---
 ## Executive Summary
-This report analyzes a recently observed phishing campaign leveraging a spoofed traffic violation notice to harvest banking credentials via a malicious URL.
+This report analyzes a recently observed phishing campaign leveraging a spoofed traffic violation notice to harvest banking credentials via a malicious URL being run out of China.
 
 **What is the threat?:** Phishing campaign impersonating government traffic enforcement.
 
@@ -14,7 +14,10 @@ This report analyzes a recently observed phishing campaign leveraging a spoofed 
 
 ## Key Findings
 This campaign is targeted at residents in the state of Georgia by a threat actor sending an image of a spoofed traffic violation that urges the victim to scan the visible QR code to make a payment on a 'traffic violation ticket'. The intent is for the user to be flustered in urgency to quickly make a payment on a low cost traffic violation for $6.99 USD due to 'Failure to Pay Toll'.
-The campaign was launched on March 4th, 2026 with users receiving the phishing image on the same date which urges them to pay the 'fine' or have a 'bench warrant placed for the victims arrest'. The listed 'court date' or 'due date' was for March 5th, 2026 - which shows the intent for urgency. Obviously this is an attempt to make the victim panic into following the phishing QR code and submitting a form of payment.
+
+The campaign was launched on March 4th, 2026 with users receiving the phishing image on the same date which urges them to pay the 'fine' or have a 'bench warrant placed for the victims arrest'. The listed 'court date' or 'due date' was for March 5th, 2026 - which shows the intent for urgency. Obviously this is an attempt to make the victim panic into following the phishing QR code and submitting a form of payment. 
+
+Upon reviewing the JavaScript, most of the text was written in Chinese with multiple commented notes with Chinese text. This displayed high confidence that the campaign is originating from China, despite a the phishing image being sent from a phone number registered in Texas, USA.
 
 *Original Phishing Image Sent by Threat Actor*
 
