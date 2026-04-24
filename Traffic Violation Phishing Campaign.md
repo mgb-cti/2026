@@ -1,4 +1,5 @@
 # Traffic Violation Phishing Campaign
+### TLP:CLEAR
 ---
 ## Executive Summary
 This report analyzes a recently observed phishing campaign leveraging a spoofed traffic violation notice to harvest banking credentials via a malicious URL.
@@ -34,7 +35,7 @@ Hosted by: CloudFlare
 Redirect Chain - 
 Initial URL from QR code: `https://hin.obediencegb[.]xyz/r/he`
 
-Final phishing page: `https://dds-georgia.uabph[.]icu/pay/`
+Final phishing page: `https://dds-georgia.uabph[.]icu/pay/` - As of April 23, 2026 the url has been taken down.
 
 Page Assets - 
 JS files - Most are null 'javascript:void(null)'
@@ -57,7 +58,7 @@ Phone Number -
 6. User submits payment info
 7. Payment “fails” → prompts re-entry
 
-Initially you would be sent an image from an unknown number which states that you will have a warrant out for your arrest if you do not pay a fine. Once you scan the QR code (MITRE ID: T1566.002), you are sent to `https://hin.obediencegb.xyz/r/he` which then redirects you to `https://dds-georgia.uabph.icu/pay/`. Most of the final redirect page is a emulating a legitimate government portal (MITRE ID: T1656), however most of the page is simply fluff with no real endpoint or redirects.
+Initially you would be sent an image from an unknown number which states that you will have a warrant out for your arrest if you do not pay a fine. Once you scan the QR code (MITRE ID: T1566.002), you are sent to `https://hin.obediencegb[.]xyz/r/he` which then redirects you to `https://dds-georgia.uabph[.]icu/pay/`. Most of the final redirect page is a emulating a legitimate government portal (MITRE ID: T1656), however most of the page is simply fluff with no real endpoint or redirects.
 
 *Landing Page After Redirect*
 
