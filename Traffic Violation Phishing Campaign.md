@@ -21,7 +21,7 @@ Upon reviewing the JavaScript, most of the text was written in Chinese with mult
 
 *Original Phishing Image Sent by Threat Actor*
 
-![image alt](https://github.com/mgb-cti/2026/blob/d6eff80204d0b30f0fc5c759c44050b9237491e4/traffficticketphishing.jpg)
+![image alt](https://github.com/mgb-cti/2026/blob/7df96dcfbef800cdf341b8d9dc4728b435bec013/2026-Images/traffficticketphishing.jpg)
 
 ## Indicators of Compromise (IOCs)
 
@@ -65,13 +65,13 @@ Initially you would be sent an image from an unknown number which states that yo
 
 *Landing Page After Redirect*
 
-![image alt](https://github.com/mgb-cti/2026/blob/d6eff80204d0b30f0fc5c759c44050b9237491e4/trafficticketlandingpage.png)
+![image alt](https://github.com/mgb-cti/2026/blob/7df96dcfbef800cdf341b8d9dc4728b435bec013/2026-Images/trafficticketlandingpage.png)
 
 First you are to enter your personal information so it can 'pull up your record' (MITRE ID: T1598.002), then it will prompt you with the same false state law that the victim broke, and what follows is the request for insertion of the victim's payment method. From there it will make it look like the payment failed in an attempt to get the victim to enter other credit card info.
 
 *Payment Page Screencap*
 
-![image alt](https://github.com/mgb-cti/2026/blob/d6eff80204d0b30f0fc5c759c44050b9237491e4/traffficticketpayment.png)
+![image alt](https://github.com/mgb-cti/2026/blob/7df96dcfbef800cdf341b8d9dc4728b435bec013/2026-Images/traffficticketpayment.png)
 
 ## MITRE ATT&CK Mapping
 
