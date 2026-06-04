@@ -1,4 +1,4 @@
-# Diver OSINT CTF 2025 - mgb-cti for Challenge ``P2T``
+# Diver OSINT CTF '25 - mgb-cti for Challenge ``P2T``
 
 ### In this Japanese based CTF, my team (SE4L) placed 15th out of 668 teams. The challenge below is just one of a few that I solved for my team with ``P2T`` being one of the harder ones to solve for non-Japanese speaking teams (like us). Below showcases my steps and findings along the way. Enjoy.
 
