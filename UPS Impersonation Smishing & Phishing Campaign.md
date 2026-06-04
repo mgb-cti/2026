@@ -243,6 +243,8 @@ This UUID should be monitored or reported to the associated platform to disrupt 
 | Indicator | Type | Confidence | Notes |
 |---|---|---|---|
 | `d2c19b29-3ae0-44a5-a780-bd42c8084b09` | Webhook UUID | Moderate | Real-time exfiltration channel |
+| `75e7a535-9492-4dd1-b5c8-d7011cb54265` | Webhook UUID | Moderate | Real-time exfiltration channel |
+
 
 ### 6.5 URL Patterns
 
