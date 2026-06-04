@@ -1,5 +1,5 @@
 # Traffic Violation Phishing Campaign
-### TLP:CLEAR
+### TLP:WHITE
 ---
 ## Executive Summary
 This report analyzes a recently observed phishing campaign leveraging a spoofed traffic violation notice to harvest banking credentials via a malicious URL being run out of China.
