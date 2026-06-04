@@ -109,7 +109,7 @@ The naming convention follows a consistent algorithmic pattern: `1usa[NN][random
 | Attribute | Detail |
 |---|---|
 | **Delivery vector** | SMS (smishing) |
-| **Sender number** | `+1 416-274-1357` *(Canadian area code — likely spoofed or VOIP)*  |
+| **Sender number** | `+1 416-274-1357` *(Canadian area code - likely spoofed or VOIP)*  |
 | **Attachment type** | PDF file |
 | **Lure theme** | Fake UPS package delivery issue |
 | **Urgency tactic** | "Check attachment immediately to avoid package being returned" |
