@@ -383,7 +383,7 @@ Attribution to Smishing Triad or Darcula should be treated as a **working hypoth
 
 ---
 
-*Second page prompting payment. (CHD)*
+*Second page prompting payment (CHD)*
 
 ![image alt](https://github.com/mgb-cti/2026/blob/main/2026-Images/UPS-Smishing-secondpage.png)
 
