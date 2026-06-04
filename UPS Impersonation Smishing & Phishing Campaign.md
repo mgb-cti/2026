@@ -1,7 +1,10 @@
 # CTI Report: UPS Impersonation Smishing & Phishing Campaign
 **TLP: WHITE**
+
 **Report Date:** 2026-06-04
+
 **Analyst:** mgb-cti
+
 **Confidence:** Moderate–High (Infrastructure); Low–Moderate (Actor Attribution)
 
 ---
