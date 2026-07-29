@@ -1,6 +1,6 @@
 # Diver OSINT CTF 2026 - Writeup for Challenge ``trot``
 -------
-## ``trot``
+## ``trot`` (35 total solves out of 865 teams)
 ### Challenge Description:
 ```Website: https://www.reddit.com/r/Awww/comments/1kej10n/is_that_a_mini_schnauzer/```
 
