@@ -57,3 +57,18 @@ The Poland cluster is near-purely single-credential brute-force (1 username/host
 
 ---
 *IP attribution from open WHOIS/geolocation lookups (AbuseIPDB/IPinfo); reflects data-center location, not attacker's physical location. Stats computed directly from query_data.csv (483,648 rows, no sampling).*
+
+
+---
+
+## Images
+Microsoft Sentinel Logs as of August 10, 2026, approximately 13:01 UTC.
+<img width="1251" height="692" alt="Screenshot 2026-08-10 at 8 59 59 AM" src="https://github.com/user-attachments/assets/d7fd1749-41f9-4d50-93f1-ce2d3ac4cf18" />
+
+---
+
+Microsoft Azure Log Analytics Workspace custom workbook as of August 10, 2026, approximately 13:01 UTC.
+
+
+<img width="1176" height="575" alt="Screenshot 2026-08-10 at 8 58 31 AM" src="https://github.com/user-attachments/assets/362a1c82-13f0-4736-8917-223a7c1845f7" />
+
