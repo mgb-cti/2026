@@ -1,74 +1,73 @@
 # CTI Report: Azure Honeypot Brute-Force Analysis
 
-**Host:** SENT-CORP-WEST | **Window:** 2026-08-02 14:25 UTC → 2026-08-09 14:25 UTC | **TLP:GREEN**
+**Host:** SENT-CORP-WEST | **Window:** 2026-08-03 22:21 UTC → 2026-08-20 21:00 UTC (~17 days) | **TLP:AMBER**
+
+*Updated with latest query export (500,000 events, superseding the prior 7-day snapshot.)*
 
 ## Summary
 
-483,648 failed logon events (EventID 4625, LogonType 3) from 497 source IPs targeting 5,553 usernames over 7 days. Volume and pattern indicate automated, continuous credential brute-forcing against an exposed RDP/SMB-class service.
+500,000 failed logon events (EventID 4625, LogonType 3) from 432 source IPs targeting 7,009 usernames. Pattern remains automated, continuous credential brute-forcing against an exposed RDP/SMB-class service.
 
-- **"Administrator"** (exact case) = 314,718 attempts (**65.1%**) — the dominant target. Case-normalized variants = 71.2%.
-- **Top 20 IPs = 85.7%** of all traffic — a small number of hosts, not a broad botnet.
-- **65.3% of volume traces to 3 rented VPS clusters** (Poland, Germany, France) — see below.
+- **"Administrator"** (exact case) = 336,538 attempts (**67.3%**) - still the dominant target. Case-normalized admin-style variants = **89.3%** of all traffic (up from 71.2% previously).
+- **Top 20 IPs = 77.1%** of all traffic.
+- **65.1% of volume still traces to the same 3 rented VPS clusters** (Poland, Germany, France) - consistent infrastructure across both collection windows.
 
 ## Most-Targeted Usernames & Correlating IP
 
 | TargetUserName | Attempts (%) | Top Correlating IP | From that IP | Region |
 |---|---|---|---|---|
-| Administrator | 314,718 (65.1%) | 88.214.25.121 | 30,566 | Germany (Frankfurt) |
-| WEST | 47,409 (9.8%) | 103.103.133.93 | 32,292 | Unattributed |
-| SENT | 23,966 (5.0%) | 121.182.226.243 | 12,561 | Unattributed |
-| ADMINISTRATOR | 14,014 (2.9%) | 14.136.73.18 | 6,019 | Unattributed |
-| administrator | 11,221 (2.3%) | 194.180.48.139 | 3,835 | Unattributed |
+| Administrator | 336,538 (67.3%) | 88.214.25.121 | 31,259 | Germany (Frankfurt) |
+| administrator | 38,175 (7.6%) | 213.55.79.194 | 6,237 | Unattributed |
+| ADMINISTRATOR | 26,079 (5.2%) | 66.181.39.165 | 5,003 | Unattributed |
+| admin | 21,262 (4.3%) | 64.76.8.21 | 8,743 | Unattributed |
+| ADMIN | 9,785 (2.0%) | 94.26.68.54 | 2,334 | Unattributed |
 
-*Note: "WEST" and "SENT" mirror the honeypot's own hostname (`SENT-CORP-WEST')) — likely hostname-derived credential guessing.*
+*Note: "WEST"/"SENT" (hostname-derived guesses, prominent in the prior window) have dropped out of the top ranks - the two IPs driving them previously (103.103.133.93, 121.182.226.243) are no longer in the top 20, suggesting that specific actor/campaign has gone quiet.*
 
 ## Top Attacking IPs
 
 | IP | Events | Top Target | Region / Host |
 |---|---|---|---|
-| 103.103.133.93 | 33,813 | WEST (96%) | Unattributed |
-| 88.214.25.121 | 30,568 | Administrator (100%) | Germany — Frankfurt (VDS&VPN/one-host.net) |
-| 194.165.16.167 | 28,873 | Administrator (100%) | Poland — Warsaw (Flyservers S.A., AS48721) |
-| 88.214.25.124 | 27,861 | Administrator (100%) | Germany — Frankfurt |
-| 194.165.16.165 | 27,491 | Administrator (100%) | Poland — Warsaw |
-| 91.238.181.92 | 26,685 | Administrator (100%) | France — Paris (VDS&VPN/one-host.net) |
-| 194.165.16.162 | 25,783 | Administrator (100%) | Poland — Warsaw |
-| 121.182.226.243 | 24,715 | SENT (51%) | Unattributed |
-| 64.76.8.21 | 13,982 | admin (31%) | Unattributed |
+| 88.214.25.121 | 31,259 | Administrator (100%) | Germany - Frankfurt (VDS&VPN/one-host.net) |
+| 194.165.16.167 | 29,428 | Administrator (99%) | Poland - Warsaw (Flyservers S.A., AS48721) |
+| 88.214.25.124 | 28,488 | Administrator (100%) | Germany - Frankfurt |
+| 194.165.16.165 | 27,935 | Administrator (100%) | Poland - Warsaw |
+| 91.238.181.92 | 27,165 | Administrator (100%) | France - Paris (VDS&VPN/one-host.net) |
+| 194.165.16.162 | 26,257 | Administrator (100%) | Poland - Warsaw |
+| 88.214.25.123 | 26,211 | Administrator (98%) | Germany - Frankfurt |
+| 194.165.16.123 | 24,852 | Administrator (100%) | Poland - Warsaw |
+| 194.165.16.163 | 24,113 | Administrator (100%) | Poland - Warsaw |
+| **64.76.8.21** | **22,907** | admin (38%) | Unattributed - *new top-10 entrant, was 13,982 last window* |
+| 194.165.16.166 | 20,817 | Administrator (98%) | Poland - Warsaw |
+| 194.165.16.161 | 19,318 | Administrator (97%) | Poland - Warsaw |
+| 194.165.16.121 | 15,805 | Administrator (98%) | Poland - Warsaw |
+| **213.55.79.194** | **14,828** | administrator (42%) | Unattributed - *new, not seen in prior window* |
+| 194.165.16.164 | 12,103 | Administrator (91%) | Poland - Warsaw |
 
 ## Regional Trends
 
 | Region | Provider | Subnet | IPs | Events | Share |
 |---|---|---|---|---|---|
-| 🇵🇱 Poland (Warsaw) | Flyservers S.A. (AS48721) | 194.165.16.0/24 | 10 | 201,074 | 41.6% |
-| 🇩🇪 Germany (Frankfurt) | VDS&VPN services / one-host.net | 88.214.25.0/24 | 4 | 86,498 | 17.9% |
-| 🇫🇷 France (Paris) | VDS&VPN services / one-host.net | 91.238.181.0/24 | 2 | 28,200 | 5.8% |
-| Other | Unattributed | — | 481 | 167,876 | 34.7% |
+| 🇵🇱 Poland (Warsaw) | Flyservers S.A. (AS48721) | 194.165.16.0/24 | 10 | 205,717 | 41.1% |
+| 🇩🇪 Germany (Frankfurt) | VDS&VPN services / one-host.net | 88.214.25.0/24 | 4 | 90,098 | 18.0% |
+| 🇫🇷 France (Paris) | VDS&VPN services / one-host.net | 91.238.181.0/24 | 3 (+1 new IP) | 29,570 | 5.9% |
+| Other | Unattributed | - | 415 | 174,615 | 34.9% |
 
-The Poland cluster is near-purely single-credential brute-force (1 username/host). The Germany/France clusters share the same hosting brand across two European POPs — likely the same reseller or operator. One German host (88.214.25.123) ran a 165-username spray, distinct from its siblings.
+All three previously-identified clusters are **still active and stable in volume/share** - this is persistent, long-running infrastructure, not a one-off burst. The France cluster added one new IP since the last window.
+
+## What Changed Since Last Report
+
+- Volume basis grew (7 days → 500K events over ~17 days), so totals aren't directly comparable, but **percentage concentration on "Administrator"-style accounts increased** (71.2% → 89.3%).
+- **64.76.8.21** and **213.55.79.194** are new/rising unattributed sources worth investigating - no open-source WHOIS/AbuseIPDB match found for 64.76.8.21 in this pass.
+- The hostname-guessing actors behind "WEST"/"SENT" (103.103.133.93, 121.182.226.243) are no longer active in top rankings.
+- The 3 confirmed European VPS clusters (Poland/Germany/France) remain the core, stable backbone of the campaign.
 
 ## Recommendations
 
 - Block/rate-limit `194.165.16.0/24`, `88.214.25.0/24`, `91.238.181.0/24` at the network edge; report to Flyservers S.A. and one-host.net abuse contacts.
+- Investigate and attribute 64.76.8.21 and 213.55.79.194 via internal threat-intel tooling (Defender TI/MaxMind) - both are now top-15 sources with no open-source attribution found.
 - Disable/rename built-in Administrator accounts where feasible; enforce lockout + MFA on any exposed auth surface.
-- Confirm RDP/SMB isn't directly internet-exposed elsewhere — use Bastion/VPN + Conditional Access.
-- Enrich remaining unattributed top IPs (103.103.133.93, 121.182.226.243, 64.76.8.21, etc.) via Defender TI / MaxMind / paid AbuseIPDB API for full regional coverage.
-- Alert on any 4624 (success) immediately following a 4625 burst from these IPs — likely indicates compromise.
+- Alert on any 4624 (success) immediately following a 4625 burst from these IPs - likely indicates compromise.
 
 ---
-*IP attribution from open WHOIS/geolocation lookups (AbuseIPDB/IPinfo); reflects data-center location, not attacker's physical location. Stats computed directly from query_data.csv (483,648 rows, no sampling).*
-
-
----
-
-## Images
-Microsoft Sentinel Logs as of August 10, 2026, approximately 13:01 UTC.
-<img width="1251" height="692" alt="Screenshot 2026-08-10 at 8 59 59 AM" src="https://github.com/user-attachments/assets/d7fd1749-41f9-4d50-93f1-ce2d3ac4cf18" />
-
----
-
-Microsoft Azure Log Analytics Workspace custom workbook as of August 10, 2026, approximately 13:01 UTC.
-
-
-<img width="1176" height="575" alt="Screenshot 2026-08-10 at 8 58 31 AM" src="https://github.com/user-attachments/assets/362a1c82-13f0-4736-8917-223a7c1845f7" />
-
+*IP attribution from open WHOIS/geolocation lookups (AbuseIPDB/IPinfo); reflects data-center location, not attacker's physical location. Stats computed directly from query_data__1_.csv (500,000 rows, no sampling).*
