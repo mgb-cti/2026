@@ -1,6 +1,6 @@
 # CTI Report: Azure Honeypot Brute-Force Analysis
 
-**Host:** SENT-CORP-WEST | **Window:** 2026-08-03 22:21 UTC → 2026-08-20 21:00 UTC (~17 days) | **TLP:AMBER**
+**Host:** SENT-CORP-WEST | **Window:** 2026-08-03 22:21 UTC → 2026-08-20 21:00 UTC (~17 days) | **TLP:Green**
 
 *Updated with latest query export (500,000 events, superseding the prior 7-day snapshot.)*
 
