@@ -70,4 +70,16 @@ All three previously-identified clusters are **still active and stable in volume
 - Alert on any 4624 (success) immediately following a 4625 burst from these IPs - likely indicates compromise.
 
 ---
-*IP attribution from open WHOIS/geolocation lookups (AbuseIPDB/IPinfo); reflects data-center location, not attacker's physical location. Stats computed directly from query_data__1_.csv (500,000 rows, no sampling).*
+*IP attribution from open WHOIS/geolocation lookups (AbuseIPDB/IPinfo); reflects data-center location, not attacker's physical location.*
+
+---
+
+## Images
+<img width="1280" height="626" alt="image" src="https://github.com/user-attachments/assets/efa2fdde-8197-4112-8b8d-7b94e54f6949" />
+<img width="1918" height="918" alt="image" src="https://github.com/user-attachments/assets/2420e5f7-e006-4de6-bd18-fb0ae301cf5f" />
+<img width="1915" height="915" alt="image" src="https://github.com/user-attachments/assets/5fdc983c-5dfa-4840-96e6-06c91715d40b" />
+<img width="1915" height="915" alt="image" src="https://github.com/user-attachments/assets/835bd3f3-e8eb-42f1-ac31-998edb004d4f" />
+
+
+
+
