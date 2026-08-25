@@ -1,4 +1,10 @@
 <img width="1325" height="783" alt="image" src="https://github.com/user-attachments/assets/c1f703d9-bc5b-4d22-bdbf-b9165845f8bb" />
+Visualized dashboard of Access Review findings prepared by Claude AI.
+
+---
+
+<img width="1498" height="710" alt="Screenshot 2026-08-25 at 11 37 01 AM" src="https://github.com/user-attachments/assets/8cd50c0c-c7f6-419c-8fa5-28b9903ffcf7" />
+Copy of data in Excel for professional file sharing.
 
 ---
 
